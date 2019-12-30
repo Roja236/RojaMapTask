@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdE-Zy-ecl" customClass="GMSMapView">
+                                <rect key="frame" x="20.5" y="44" width="373" height="448"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOr-Qy-3bE">
+                                <rect key="frame" x="326" y="420.5" width="67.5" height="71.5"/>
+                                <state key="normal" image="mylocation"/>
+                                <connections>
+                                    <action selector="showCurrentLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zg7-BE-Ppc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 2451" translatesAutoresizingMaskIntoConstraints="NO" id="6W5-2E-emK">
+                                <rect key="frame" x="151" y="223" width="112" height="90"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YY4-r8-WHO">
+                                <rect key="frame" x="20.5" y="500" width="373" height="89.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAc-9W-dY2">
+                                <rect key="frame" x="20.5" y="608" width="373" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Confirm Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_ConfirmLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12C-bx-uaN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uAc-9W-dY2" firstAttribute="width" secondItem="YY4-r8-WHO" secondAttribute="width" id="6Oo-2n-nHN"/>
+                            <constraint firstItem="uAc-9W-dY2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Hw-eH-RB8"/>
+                            <constraint firstItem="uAc-9W-dY2" firstAttribute="top" secondItem="YY4-r8-WHO" secondAttribute="bottom" constant="18.5" id="9p2-hy-R1E"/>
+                            <constraint firstItem="BOr-Qy-3bE" firstAttribute="width" secondItem="6W5-2E-emK" secondAttribute="width" multiplier="0.6" id="B0K-Rf-msV"/>
+                            <constraint firstItem="mdE-Zy-ecl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EiO-mz-VrX"/>
+                            <constraint firstItem="YY4-r8-WHO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HzS-9v-RbC"/>
+                            <constraint firstItem="mdE-Zy-ecl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="KI1-Oj-GYt"/>
+                            <constraint firstItem="YY4-r8-WHO" firstAttribute="width" secondItem="mdE-Zy-ecl" secondAttribute="width" id="LPL-0h-DM1"/>
+                            <constraint firstItem="6W5-2E-emK" firstAttribute="height" secondItem="mdE-Zy-ecl" secondAttribute="height" multiplier="0.2" id="NVI-3e-Ks5"/>
+                            <constraint firstItem="YY4-r8-WHO" firstAttribute="top" secondItem="mdE-Zy-ecl" secondAttribute="bottom" constant="8" id="UFa-ft-mA2"/>
+                            <constraint firstItem="YY4-r8-WHO" firstAttribute="top" secondItem="mdE-Zy-ecl" secondAttribute="bottom" constant="8" id="YIA-7Y-VaO"/>
+                            <constraint firstItem="BOr-Qy-3bE" firstAttribute="height" secondItem="6W5-2E-emK" secondAttribute="height" multiplier="0.8" id="dN6-Ma-7il"/>
+                            <constraint firstItem="BOr-Qy-3bE" firstAttribute="bottom" secondItem="mdE-Zy-ecl" secondAttribute="bottom" id="hDV-od-6DC"/>
+                            <constraint firstItem="BOr-Qy-3bE" firstAttribute="trailing" secondItem="mdE-Zy-ecl" secondAttribute="trailing" id="mHa-Sd-MM5"/>
+                            <constraint firstItem="6W5-2E-emK" firstAttribute="width" secondItem="mdE-Zy-ecl" secondAttribute="width" multiplier="0.3" id="nOs-9C-IXb"/>
+                            <constraint firstItem="mdE-Zy-ecl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r2V-te-NOT"/>
+                            <constraint firstItem="mdE-Zy-ecl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="sDF-Nw-b3w"/>
+                            <constraint firstItem="6W5-2E-emK" firstAttribute="centerX" secondItem="mdE-Zy-ecl" secondAttribute="centerX" id="u5C-gf-TRr"/>
+                            <constraint firstItem="6W5-2E-emK" firstAttribute="centerY" secondItem="mdE-Zy-ecl" secondAttribute="centerY" id="uDO-fW-PUS"/>
+                            <constraint firstItem="YY4-r8-WHO" firstAttribute="height" secondItem="mdE-Zy-ecl" secondAttribute="height" multiplier="0.2" id="vdo-qF-xqe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressTV" destination="YY4-r8-WHO" id="bkD-W9-crM"/>
+                        <outlet property="confirmLocationBtn" destination="uAc-9W-dY2" id="xvM-Jw-Cwk"/>
+                        <outlet property="mapView" destination="mdE-Zy-ecl" id="eHq-I6-g5L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 2451" width="90.5" height="90.5"/>
+        <image name="mylocation" width="56" height="56"/>
+    </resources>
+</document>
